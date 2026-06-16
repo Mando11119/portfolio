@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Michael Huang | Biomedical Sciences Portfolio</title>
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
         /* ----- RESET & BASE ----- */
@@ -53,7 +52,6 @@
             padding: 0 24px;
         }
 
-        /* ----- SCROLLBAR ----- */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -65,7 +63,6 @@
             border-radius: 8px;
         }
 
-        /* ----- TYPOGRAPHY ----- */
         h1,
         h2,
         h3 {
@@ -108,7 +105,6 @@
             margin-bottom: 0.5rem;
         }
 
-        /* ----- HEADER / NAV ----- */
         header {
             position: fixed;
             top: 0;
@@ -160,7 +156,6 @@
             background: rgba(26, 60, 94, 0.06);
         }
 
-        /* mobile nav toggle */
         .nav-toggle {
             display: none;
             background: none;
@@ -171,7 +166,6 @@
             padding: 0.4rem;
         }
 
-        /* ----- HERO ----- */
         .hero {
             padding: 140px 0 80px;
             background: linear-gradient(160deg, #f0f6ff 0%, #ffffff 70%);
@@ -221,26 +215,6 @@
             flex-wrap: wrap;
             gap: 0.75rem;
         }
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--primary);
-            color: #fff;
-            padding: 0.7rem 1.8rem;
-            border-radius: 40px;
-            font-weight: 500;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            font-size: 0.95rem;
-        }
-        .btn-primary:hover {
-            background: var(--primary-light);
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(26, 60, 94, 0.25);
-        }
         .btn-outline {
             display: inline-flex;
             align-items: center;
@@ -288,7 +262,6 @@
             border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
-        /* ----- SECTION COMMON ----- */
         section {
             padding: 72px 0;
         }
@@ -305,7 +278,6 @@
             font-size: 1.05rem;
         }
 
-        /* ----- ABOUT / MOTIVATION ----- */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -336,7 +308,6 @@
             font-size: 0.95rem;
         }
 
-        /* ----- ACADEMICS ----- */
         .academics-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -361,15 +332,13 @@
             background: var(--primary);
             color: #fff;
             font-weight: 700;
-            font-size: 0.8rem;
-            padding: 0.2rem 0.7rem;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.6rem;
             border-radius: 40px;
+            white-space: nowrap;
         }
         .subject-card .grade-badge.gold {
             background: #d4a017;
-        }
-        .subject-card .grade-badge.silver {
-            background: #8a9ba8;
         }
         .subject-card h4 {
             font-size: 1rem;
@@ -381,7 +350,6 @@
             margin: 0;
         }
 
-        /* ----- COMPETITIONS ----- */
         .competition-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -430,7 +398,6 @@
             margin-top: 0.3rem;
         }
 
-        /* ----- RESEARCH ----- */
         .research-card {
             background: var(--card-bg);
             padding: 2rem;
@@ -483,7 +450,6 @@
             border: 1px solid var(--border);
         }
 
-        /* ----- INTERESTS / HOBBIES ----- */
         .hobbies-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -516,7 +482,6 @@
             margin: 0;
         }
 
-        /* ----- FOOTER ----- */
         .footer {
             background: var(--primary-dark);
             color: rgba(255, 255, 255, 0.6);
@@ -525,14 +490,7 @@
             font-size: 0.85rem;
             border-top: 1px solid rgba(255, 255, 255, 0.06);
         }
-        .footer a {
-            color: var(--accent-light);
-        }
-        .footer a:hover {
-            color: #fff;
-        }
 
-        /* ----- RESPONSIVE ----- */
         @media (max-width: 992px) {
             .hero-grid {
                 grid-template-columns: 1fr;
@@ -614,7 +572,6 @@
             .hero-badges span {
                 font-size: 0.75rem;
             }
-            .btn-primary,
             .btn-outline {
                 width: 100%;
                 justify-content: center;
@@ -674,7 +631,7 @@
         </div>
     </section>
 
-    <!-- ===== ABOUT / MOTIVATION ===== -->
+    <!-- ===== ABOUT ===== -->
     <section id="about">
         <div class="container">
             <div class="section-header">
@@ -685,7 +642,7 @@
             <div class="about-grid">
                 <div class="about-card">
                     <div class="icon"><i class="fas fa-bug"></i></div>
-                    <h3>From Ants to Genes</h3>
+                    <h3>From Insects to Genes</h3>
                     <p>
                         At age 6, I became fascinated by insects — beetles, mantises,
                         and ants — each with their own unique behaviours and social
@@ -733,54 +690,59 @@
             <div class="section-header">
                 <span class="section-tag">Academics</span>
                 <h2>Coursework &amp; Grades</h2>
-                <p>My A-Level subjects — AS exams just completed, results pending. Consistently achieved A* in all mock examinations.</p>
+                <p>
+                    AS exams just completed, results pending. All A* grades shown are
+                    <strong>predicted</strong> based on consistent performance in school
+                    mock examinations.
+                </p>
             </div>
             <div class="academics-grid">
                 <div class="subject-card">
-                    <span class="grade-badge gold">A*</span>
+                    <span class="grade-badge gold">A* (预估)</span>
                     <div>
                         <h4>Mathematics (AS)</h4>
                         <p>
-                            Pure Mathematics 1 &amp; 2 — quadratics, coordinate geometry,
-                            sequences, functions, trigonometry, and an introduction to
-                            calculus (differentiation and integration). Also studied
-                            either Mechanics (M1) or Statistics (S1).[reference:7]
+                            Pure Mathematics 1 &amp; 2 covering quadratics, coordinate
+                            geometry, sequences, functions, trigonometry, differentiation,
+                            and integration, alongside either Mechanics or Statistics.
                         </p>
                     </div>
                 </div>
                 <div class="subject-card">
-                    <span class="grade-badge gold">A*</span>
+                    <span class="grade-badge gold">A* (预估)</span>
                     <div>
                         <h4>Chemistry (AS)</h4>
                         <p>
-                            Physical Chemistry: atomic structure, chemical bonding,
-                            chemical energetics, electrochemistry and reaction kinetics.
-                            Inorganic: periodicity, Group 2 &amp; 7 elements. Organic:
-                            hydrocarbons, halogenoalkanes, alcohols, carbonyl compounds,
-                            carboxylic acids and polymers.[reference:8]
+                            Physical Chemistry topics including atomic structure,
+                            chemical bonding, energetics, electrochemistry, and kinetics.
+                            Inorganic Chemistry covering periodicity, Group 2 and Group 7
+                            elements. Organic Chemistry covering hydrocarbons,
+                            halogenoalkanes, alcohols, carbonyl compounds, carboxylic
+                            acids, and polymers.
                         </p>
                     </div>
                 </div>
                 <div class="subject-card">
-                    <span class="grade-badge gold">A*</span>
+                    <span class="grade-badge gold">A* (预估)</span>
                     <div>
                         <h4>Biology (AS)</h4>
                         <p>
-                            Cell structure and function; biological molecules
-                            (carbohydrates, lipids, proteins, water); enzymes and their
-                            kinetics; cell membranes and transport; the mitotic cell
-                            cycle; nucleic acids and protein synthesis.[reference:9][reference:10]
+                            Cell structure and function, biological molecules including
+                            carbohydrates, lipids, and proteins, enzyme kinetics,
+                            membrane transport, the mitotic cell cycle, and nucleic acids
+                            in protein synthesis.
                         </p>
                     </div>
                 </div>
                 <div class="subject-card">
-                    <span class="grade-badge gold">A*</span>
+                    <span class="grade-badge gold">A* (预估)</span>
                     <div>
                         <h4>Physics (AS)</h4>
                         <p>
-                            Physical quantities and units; kinematics and dynamics;
-                            forces, work, energy and power; materials; waves; electricity;
-                            and an introduction to particle and nuclear physics.[reference:11]
+                            Physical quantities and units, kinematics, dynamics, forces,
+                            work, energy, power, materials properties, wave behaviour,
+                            electrical circuits, and an introduction to particle and
+                            nuclear physics.
                         </p>
                     </div>
                 </div>
@@ -866,7 +828,7 @@
                     <p>
                         USA Biology Olympiad China — the Chinese equivalent of
                         USABO, testing molecular biology, cell biology, genetics,
-                        and ecology.[reference:12][reference:13]
+                        and ecology.
                     </p>
                 </div>
 
@@ -939,7 +901,7 @@
         </div>
     </section>
 
-    <!-- ===== INTERESTS / HOBBIES ===== -->
+    <!-- ===== INTERESTS ===== -->
     <section id="interests">
         <div class="container">
             <div class="section-header">
@@ -992,7 +954,6 @@
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // ----- Mobile nav toggle -----
         const toggle = document.getElementById('navToggle');
         const nav = document.getElementById('navMenu');
 
@@ -1007,7 +968,6 @@
             }
         });
 
-        // Close nav on link click (mobile)
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', () => {
                 nav.classList.remove('open');
@@ -1016,7 +976,6 @@
             });
         });
 
-        // Close nav on outside click
         document.addEventListener('click', function(e) {
             const header = document.querySelector('header');
             if (!header.contains(e.target)) {
@@ -1026,9 +985,8 @@
             }
         });
 
-        // ----- Active nav link on scroll -----
         const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('nav a:not(.nav-cta)');
+        const navLinks = document.querySelectorAll('nav a');
 
         function updateActiveLink() {
             let current = '';
@@ -1049,9 +1007,7 @@
         window.addEventListener('scroll', updateActiveLink);
         window.addEventListener('load', updateActiveLink);
 
-        // ----- Smooth reveal animation on scroll -----
         const cards = document.querySelectorAll('.about-card, .subject-card, .comp-card, .research-card, .hobby-card');
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
