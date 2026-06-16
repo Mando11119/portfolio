@@ -160,17 +160,6 @@
             background: rgba(26, 60, 94, 0.06);
         }
 
-        .nav-cta {
-            background: var(--primary);
-            color: #fff !important;
-            padding: 0.4rem 1.2rem;
-            border-radius: 40px;
-        }
-        .nav-cta:hover {
-            background: var(--primary-light);
-            color: #fff !important;
-        }
-
         /* mobile nav toggle */
         .nav-toggle {
             display: none;
@@ -527,57 +516,20 @@
             margin: 0;
         }
 
-        /* ----- CONTACT / FOOTER ----- */
-        .contact-section {
+        /* ----- FOOTER (精简版) ----- */
+        .footer {
             background: var(--primary-dark);
-            color: #fff;
-            padding: 56px 0 40px;
-        }
-        .contact-section .section-header h2 {
-            color: #fff;
-        }
-        .contact-section .section-header p {
-            color: rgba(255, 255, 255, 0.7);
-        }
-        .contact-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 0.95rem;
-            transition: var(--transition);
-        }
-        .contact-item:hover {
-            color: #fff;
-            transform: translateY(-2px);
-        }
-        .contact-item i {
-            font-size: 1.2rem;
-            color: var(--accent);
-            width: 1.6rem;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 32px 0 24px;
             text-align: center;
-        }
-        .contact-item a {
-            color: inherit;
-        }
-        .contact-item a:hover {
-            color: #fff;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 2rem;
-            margin-top: 2rem;
             font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .footer a {
+            color: var(--accent-light);
+        }
+        .footer a:hover {
+            color: #fff;
         }
 
         /* ----- RESPONSIVE ----- */
@@ -685,7 +637,7 @@
                 <a href="#research">Research</a>
                 <a href="#competitions">Achievements</a>
                 <a href="#interests">Interests</a>
-                <a href="#contact" class="nav-cta">Contact</a>
+                <!-- Contact 链接已删除 -->
             </nav>
         </div>
     </header>
@@ -711,9 +663,7 @@
                         <span><i class="fas fa-dna"></i> Cancer Biology</span>
                     </div>
                     <div class="hero-actions">
-                        <a href="#contact" class="btn-primary">
-                            <i class="fas fa-envelope"></i> Get in touch
-                        </a>
+                        <!-- "Get in touch" 按钮已删除，只保留 "See my work" -->
                         <a href="#research" class="btn-outline">
                             <i class="fas fa-microscope"></i> See my work
                         </a>
@@ -1028,40 +978,12 @@
         </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
-    <section class="contact-section" id="contact">
+    <!-- ===== FOOTER (精简，无联系信息) ===== -->
+    <footer class="footer">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag" style="color:var(--accent-light); background:rgba(74,158,255,0.15);">Connect</span>
-                <h2>Let's Talk</h2>
-                <p>
-                    I'm always open to discussing research, collaboration, or
-                    just exchanging ideas about biology and beyond.
-                </p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:michael.huang@email.com">michael.huang@email.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin-in"></i>
-                    <a href="#">linkedin.com/in/michaelhuang</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="#">github.com/michaelhuang</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Nanjing, China</span>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                &copy; 2026 Michael Huang · Built with <i class="fas fa-heart" style="color:var(--accent);font-size:0.7rem;"></i> for the journey ahead.
-            </div>
+            &copy; 2026 Michael Huang · Built with <i class="fas fa-heart" style="color:var(--accent);font-size:0.7rem;"></i> for the journey ahead.
         </div>
-    </section>
+    </footer>
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
@@ -1122,8 +1044,7 @@
         window.addEventListener('scroll', updateActiveLink);
         window.addEventListener('load', updateActiveLink);
 
-        // ----- Smooth reveal animation on scroll (optional enhancement) -----
-        // Uses Intersection Observer to add a subtle fade-in for cards
+        // ----- Smooth reveal animation on scroll -----
         const cards = document.querySelectorAll('.about-card, .subject-card, .comp-card, .research-card, .hobby-card');
 
         const observer = new IntersectionObserver((entries) => {
@@ -1142,7 +1063,6 @@
             observer.observe(card);
         });
 
-        // Also observe section headers
         document.querySelectorAll('.section-header').forEach(header => {
             header.style.opacity = '0';
             header.style.transform = 'translateY(12px)';
@@ -1151,7 +1071,6 @@
         });
 
         console.log('🚀 Michael Huang — Biomedical Sciences Portfolio');
-        console.log('📧 michael.huang@email.com');
     </script>
 
 </body>
